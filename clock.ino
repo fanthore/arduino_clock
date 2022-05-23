@@ -76,8 +76,9 @@ int mm = timeClient.getMinutes();
 int ss = timeClient.getSeconds();
 int day = timeClient.getDay();
 String present_day = ("'"+arr_days[day]+"'");
-String clean_day = present_day.substring(1,4);
-display.println(clean_day);
+present_day.replace( "'" , " " );
+
+display.println(present_day);
 date_time = timeClient.getFormattedTime();
 
 int index_date = date_time.indexOf("T");
